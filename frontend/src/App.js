@@ -6,7 +6,7 @@ export default function App() {
   const [parlay, setParlay] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/odds/worldcup")
+fetch("https://parlay-agent-production.up.railway.app/odds/worldcup")
       .then(r => r.json())
       .then(data => {
         setGames(data);

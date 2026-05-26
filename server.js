@@ -6,7 +6,9 @@ require('dotenv').config();
 const app = express();
 const PORT = 3001;
 
-app.use(cors());
+app.use(cors({
+  origin: '*'
+}));
 app.use(express.json());
 
 // ── Test route ──────────────────────────────────────────────────
